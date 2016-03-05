@@ -5,9 +5,6 @@ import sys
 savePath = sys.argv[1]
 imgPaths = sys.argv[2:]
 
-print savePath
-print len(imgPaths)
-
 def toLuminance(r, g, b):
     rc = 0.2126
     gc = 0.7152
@@ -24,8 +21,10 @@ color = np.empty([640, 640, 3])
 size = xrange(640)
 
 numImgs = len(imgs)
-
-print "staring color"
+while numImgs < 13:
+    for idx in xrange(numImgs):
+        imgs.append(imgs[idx])
+    numImgs = len(imgs)
 
 for x in size:
     for y in size:
