@@ -6,4 +6,4 @@ save:
 	pip freeze > requirements.txt
 
 test:
-	python run.py out.jpg $(shell ls ./test-imgs/8*.jpg)
+	python run.py test.jpg $(shell ls ./test-imgs/*.jpg)
