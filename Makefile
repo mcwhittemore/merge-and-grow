@@ -1,3 +1,5 @@
+# deactivate to stop
+
 
 activate:
 	source ./venv/bin/activate
